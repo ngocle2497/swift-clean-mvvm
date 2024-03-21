@@ -1,0 +1,4 @@
+"login.email" = "Email";
+"login.email.required" = "Email is required!";
+"login.password" = "Password";
+"login.password.required" = "Password is reauired!";
