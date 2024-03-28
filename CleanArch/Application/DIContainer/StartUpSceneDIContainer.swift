@@ -20,17 +20,7 @@ final class StartUpSceneDIContainer: StartUpFlowCoordinatorDependencies {
     }
     
     private func makeSplashViewModel(actions: SplashViewModelActions) -> SplashViewModel {
-        return SplashViewModelImpl(actions: actions)
-    }
-    
-    // MARK: - Login
-    
-    func makeLoginViewController(actions: LoginViewModelActions) -> LoginViewController {
-        return LoginViewController.create(with: makeLoginViewModel(actions: actions))
-    }
-    
-    func makeLoginViewModel(actions: LoginViewModelActions) -> LoginViewModel {
-        return LoginViewModelImpl(actions: actions)
+        return SplashViewModel(actions: actions)
     }
     
     // MARK: - Intro
@@ -39,7 +29,7 @@ final class StartUpSceneDIContainer: StartUpFlowCoordinatorDependencies {
     }
     
     func makeIntroViewModel(actions: IntroViewModelActions) -> IntroViewModel {
-        return IntroViewModelImpl(actions: actions)
+        return IntroViewModel(actions: actions)
     }
     
     

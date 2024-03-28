@@ -5,6 +5,15 @@ struct LocalStorage {
     static var shared = LocalStorage()
     private var instance: MMKV?
     
+    var introShown: Bool {
+        get {
+            return instance?.bool(forKey: "introShown") ?? false
+        }
+        set {
+            instance?.set(newValue, forKey: "introShown")
+        }
+    }
+    
     var appToken: String? {
         get {
             return instance?.string(forKey: "appToken")
@@ -74,6 +83,15 @@ struct LocalStorage {
                 instance?.removeValue(forKey: "appLanguage")
             }
         }
+    }
+    
+    func resetAll() {
+        if let instance = instance {
+            for key in instance.allKeys() {
+                instance.removeValue(forKey: key as! String)
+            }
+        }
+        
     }
     
     private init() {

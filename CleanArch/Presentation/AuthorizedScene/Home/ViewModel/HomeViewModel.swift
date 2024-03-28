@@ -12,9 +12,9 @@ protocol HomeViewModelOutput {
     
 }
 
-typealias HomeViewModel = HomeViewModelInput & HomeViewModelOutput
+typealias HomeViewModelType = HomeViewModelInput & HomeViewModelOutput
 
-final class HomeViewModelImpl: HomeViewModel {
+final class HomeViewModel: ViewModel, HomeViewModelType {
     private var actions: HomeViewModelActions?
   
     init(actions: HomeViewModelActions? = nil) {
@@ -22,9 +22,10 @@ final class HomeViewModelImpl: HomeViewModel {
     }
 }
 
-extension HomeViewModelImpl {
+extension HomeViewModel {
     // MARK: - Input
     func logout() {
+        LocalStorage.shared.appToken = nil
         actions?.logout()
     }
 }

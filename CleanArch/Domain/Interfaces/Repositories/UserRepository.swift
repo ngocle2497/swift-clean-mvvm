@@ -1,5 +1,6 @@
 import Foundation
+import RxSwift
 
 protocol UserRepository {
-    func getUserList(page: Int, pageSize: Int, completion: @escaping (Result<UsersPage, Error>) -> Void) -> Void
+    func getUserList()  async -> RequestResult<UserResponseDTO>
 }

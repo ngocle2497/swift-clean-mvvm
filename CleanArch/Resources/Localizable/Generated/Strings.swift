@@ -16,10 +16,14 @@ internal enum S10n {
     /// Password
     internal static var password: String { return S10n.tr("Localizable", "login.password", fallback: "Password") }
     internal enum Email {
+      /// Email is Invalid!
+      internal static var invalid: String { return S10n.tr("Localizable", "login.email.invalid", fallback: "Email is Invalid!") }
       /// Email is required!
       internal static var `required`: String { return S10n.tr("Localizable", "login.email.required", fallback: "Email is required!") }
     }
     internal enum Password {
+      /// Password is Invalid!
+      internal static var invalid: String { return S10n.tr("Localizable", "login.password.invalid", fallback: "Password is Invalid!") }
       /// Password is reauired!
       internal static var `required`: String { return S10n.tr("Localizable", "login.password.required", fallback: "Password is reauired!") }
     }

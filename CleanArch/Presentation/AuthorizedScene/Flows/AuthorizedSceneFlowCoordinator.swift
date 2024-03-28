@@ -15,16 +15,15 @@ final class AuthorizedSceneFlowCoordinator {
         self.dependencies = dependencies
     }
     
-    func start() {
+    func start(animated: Bool) {
         let actions = HomeViewModelActions(logout: logout)
         let vc = dependencies.makeHomeViewController(actions: actions)
-        navigationController?.setViewControllers([vc], animated: true)
+        navigationController?.setViewControllers([vc], animated: animated)
         homeViewController = vc
     }
     
     private func logout() {
-        let container = StartUpSceneDIContainer(dependencies: StartUpSceneDIContainer.Dependencies(apiService: "Something"))
-        let flow = container.makeStartUpFlowCoordinator(navigationController: navigationController)
-        flow.startFromLogin()
-    }
-}
+        let container = AuthenticationDIContainer()
+        let flow = container.makeAuthenticationSceneFlowCoordinator(navigationController: navigationController)
+        flow.start(animated: true)
+    }}

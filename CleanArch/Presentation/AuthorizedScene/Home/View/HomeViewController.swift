@@ -1,15 +1,12 @@
 import UIKit
 
-class HomeViewController: UIViewController {
-
-    private var vm: HomeViewModel!
+class HomeViewController: ViewController<HomeViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     static func create(with viewModel: HomeViewModel) -> HomeViewController {
-        let vc = HomeViewController()
-        vc.vm = viewModel
+        let vc = HomeViewController(vm: viewModel)
         return vc
     }
 

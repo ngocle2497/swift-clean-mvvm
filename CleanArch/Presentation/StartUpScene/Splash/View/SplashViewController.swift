@@ -1,8 +1,7 @@
 import UIKit
 
-class SplashViewController: UIViewController {
+class SplashViewController: ViewController<SplashViewModel> {
 
-    private var vm: SplashViewModel!
     
     @IBOutlet weak var iconSplashImageView: UIImageView!
     override func viewDidLoad() {
@@ -12,8 +11,7 @@ class SplashViewController: UIViewController {
     }
 
     static func create(with viewModal: SplashViewModel) -> SplashViewController{
-        let view =  SplashViewController()
-        view.vm = viewModal
+        let view =  SplashViewController(vm: viewModal)
         return view
     }
     

@@ -2,8 +2,8 @@ import Foundation
 
 struct SplashViewModelActions {
     let showIntroScreen: () -> Void
-    let showLoginScreen: () -> Void
-    let showHomeScreen: () -> Void
+    let showAuthenticationScreen: (Bool) -> Void
+    let showAuthorizedScreen: (Bool) -> Void
 }
 
 protocol SplashViewModelInput {
@@ -15,9 +15,9 @@ protocol SplashViewModelOutput {
     
 }
 
-typealias SplashViewModel = SplashViewModelInput & SplashViewModelOutput
+typealias SplashViewModelType = SplashViewModelInput & SplashViewModelOutput
 
-final class SplashViewModelImpl: SplashViewModel {
+final class SplashViewModel:ViewModel, SplashViewModelType {
     
     private let actions: SplashViewModelActions?
     
@@ -31,13 +31,21 @@ final class SplashViewModelImpl: SplashViewModel {
 }
 
 // MARK: - Input
-extension SplashViewModelImpl {
+extension SplashViewModel {
     func getConfig() {
         // TODO: get config, push event to View, View call showNextScreen
         
     }
     
     func showNextScreen() {
-        actions?.showIntroScreen()
+        if LocalStorage.shared.introShown {
+            if LocalStorage.shared.appToken != nil {
+                actions?.showAuthorizedScreen(false)
+            } else {
+                actions?.showAuthenticationScreen(false)
+            }
+        } else {
+            actions?.showIntroScreen()
+        }
     }
 }

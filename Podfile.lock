@@ -8,6 +8,7 @@ PODS:
     - Moya/Core (= 15.0.0)
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
+  - ObjectMapper (4.2.0)
   - RxCocoa (6.6.0):
     - RxRelay (= 6.6.0)
     - RxSwift (= 6.6.0)
@@ -23,6 +24,7 @@ DEPENDENCIES:
   - CryptoSwift
   - MMKV
   - Moya
+  - ObjectMapper
   - RxCocoa
   - RxSwift
   - SDWebImage
@@ -35,6 +37,7 @@ SPEC REPOS:
     - MMKV
     - MMKVCore
     - Moya
+    - ObjectMapper
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -47,12 +50,13 @@ SPEC CHECKSUMS:
   MMKV: f902fb6719da13c2ab0965233d8963a59416f911
   MMKVCore: d26e4d3edd5cb8588c2569222cbd8be4231374e9
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   RxCocoa: 44a80de90e25b739b5aeaae3c8c371a32e3343cc
   RxRelay: 45eaa5db8ee4fb50e5ebd57deec0159e97fa51e6
   RxSwift: a4b44f7d24599f674deebd1818eab82e58410632
   SDWebImage: 981fd7e860af070920f249fd092420006014c3eb
   SwiftGen: 4993cbf71cbc4886f775e26f8d5c3a1188ec9f99
 
-PODFILE CHECKSUM: 71fb67f65ab4e8b30361ca0a1103f5f04738ed45
+PODFILE CHECKSUM: 5175c41949861798a395e872c8cce99fdd948528
 
-COCOAPODS: 1.14.3
+COCOAPODS: 1.15.2

@@ -11,6 +11,18 @@ func localized(_ key: String, _ table: String, _ value: String) -> String {
 }
 
 extension String {
+    func validateEmail() -> Bool {
+        let emailRegex = "^[a-zA-Z0-9]+([%\\^&\\-\\=\\+\\,\\.]?[a-zA-Z0-9]+)@[a-zA-Z]+([\\.]?[a-zA-Z]+)*(\\.[a-zA-Z]{2,3})+$"
+        let predicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        return predicate.evaluate(with: self)
+    }    
+    
+    func validatePassword() -> Bool {
+        let passwordRegex = "^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W)(?!.*[\'\"]).{8,}$"
+        let predicate = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
+        return predicate.evaluate(with: self)
+    }
+    
     func toDic() -> [String: Any]? {
         if let data = self.data(using: .utf8) {
             do {

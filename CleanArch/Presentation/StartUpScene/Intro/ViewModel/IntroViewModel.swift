@@ -1,28 +1,36 @@
 import Foundation
+import RxSwift
+import RxCocoa
 
 struct IntroViewModelActions {
-    let showLoginScreen: () -> Void
+    let showAuthenticationScreen: (Bool) -> Void
 }
 
 protocol IntroViewModelInput {
     func saveConfigIntroShown()
 }
 
-typealias IntroViewModel = IntroViewModelInput
+protocol IntroViewModelOutput {
+    var publishSubject: PublishSubject<String> { get }
+}
 
-final class IntroViewModelImpl: IntroViewModel {
+final class IntroViewModel: ViewModel, IntroViewModelInput, IntroViewModelOutput {
+    
+    let publishSubject = PublishSubject<String>()
     
     private let actions: IntroViewModelActions?
-
+    
     init(actions: IntroViewModelActions?) {
         self.actions = actions
     }
+    
 }
 
-extension IntroViewModelImpl {
+extension IntroViewModel {
     // MARK: - Input
     func saveConfigIntroShown() {
         // TODO: Save config intro screen shown.
-        actions?.showLoginScreen()
+        LocalStorage.shared.introShown = true
+        actions?.showAuthenticationScreen(true)
     }
 }

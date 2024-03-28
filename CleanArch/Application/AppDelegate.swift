@@ -13,13 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         
         let navigation = UINavigationController()
+        navigation.isNavigationBarHidden = true
         window?.rootViewController = navigation
         
         appFlowCoordinator = AppFlowCoordinator(navigationController: navigation, appDIContainer: appDIContainer)
         
         appFlowCoordinator?.start()
         window?.makeKeyAndVisible()
-        
         return true
     }
     func applicationWillResignActive(_ application: UIApplication) {

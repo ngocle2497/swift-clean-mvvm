@@ -1,39 +1,39 @@
 import Foundation
 
+
 // MARK: - Data Tranfer Object
 
-struct UserResponseDTO: Decodable {
-    private enum CodingKeys: String, CodingKey {
-        case page
-        case totalPages = "total_pages"
-        case users = "results"
-    }
-    
-    let page: Int
-    let totalPages: Int
-    let users: [UserDTO]
+
+struct UserResponseDTO: Codable {
+    let info: Info
+    let results: [UserDTO]
 }
 
+
 extension UserResponseDTO {
-    struct UserDTO: Decodable {
-        private enum CodingKeys: String, CodingKey {
-            case id
-            case gender
-            case name
-            case email
-            case createAt = "create_at"
+    struct Info: Codable {
+        let seed: String
+        let results: Int
+        let page: Int
+        let version: String
+    }
+    struct UserDTO: Codable {
+        enum Gender: String, Codable {
+            case male   = "male"
+            case female = "female"
         }
         
-        enum GenderDTO: String, Decodable {
-            case male
-            case female
+        struct Name: Codable {
+            let title: String
+            let first: String
+            let last: String
         }
         
-        let id: String
-        let gender: GenderDTO?
-        let name: String?
-        let email: String?
-        let createAt: String?
+        let phone: String
+        let nat: String
+        let gender: Gender
+        let name: Name
+        let email: String
     }
 }
 
@@ -41,17 +41,17 @@ extension UserResponseDTO {
 
 extension UserResponseDTO {
     func toDomain() -> UsersPage {
-        return .init(page: page, totalPage: totalPages, users: users.map({ $0.toDomain() }))
+        return .init(page: info.page, totalPage: info.results, users: results.map({ $0.toDomain() }))
     }
 }
 
 extension UserResponseDTO.UserDTO {
     func toDomain() -> User {
-        return .init(id: id, gender: gender?.toDomain(), name: name, email: email)
+        return .init(id: nat, gender: gender.toDomain(), name: name.first, email: email)
     }
 }
 
-extension UserResponseDTO.UserDTO.GenderDTO {
+extension UserResponseDTO.UserDTO.Gender {
     func toDomain() -> User.Gender {
         switch self {
         case .male:

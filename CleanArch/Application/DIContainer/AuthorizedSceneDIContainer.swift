@@ -19,7 +19,7 @@ final class AuthorizedSceneDIContainer: AuthorizedSceneFlowCoordinatorDependenci
     }
     
     func makeHomeViewModel(actions: HomeViewModelActions) -> HomeViewModel {
-        return HomeViewModelImpl(actions: actions)
+        return HomeViewModel(actions: actions)
     }
     
     // MARK: - Flow

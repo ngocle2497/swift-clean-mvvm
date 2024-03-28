@@ -3,7 +3,7 @@ import UIKit
 
 protocol StartUpFlowCoordinatorDependencies {
     func makeSplashViewController(actions: SplashViewModelActions) -> SplashViewController
-    func makeLoginViewController(actions: LoginViewModelActions) -> LoginViewController
+    
     func makeIntroViewController(actions: IntroViewModelActions) -> IntroViewController
 }
 
@@ -11,8 +11,7 @@ final class StartUpFlowCoordinator {
     
     private weak var navigationController: UINavigationController?
     private let dependencies: StartUpFlowCoordinatorDependencies
-    private weak var splashViewController: SplashViewController?
-
+    
     
     init(navigationController: UINavigationController?, dependencies: StartUpFlowCoordinatorDependencies) {
         self.navigationController = navigationController
@@ -20,34 +19,32 @@ final class StartUpFlowCoordinator {
     }
     
     func start() {
-        let actions = SplashViewModelActions(showIntroScreen: showIntroScreen, showLoginScreen: showLoginScreen, showHomeScreen: showHomeScreen)
+        let actions = SplashViewModelActions(showIntroScreen: showIntroScreen, showAuthenticationScreen: showAuthenticationScreen, showAuthorizedScreen: showAuthorizedScreen)
         let vc = dependencies.makeSplashViewController(actions: actions)
         navigationController?.pushViewController(vc, animated: true)
-        splashViewController = vc
     }
     
     func startFromLogin() {
-        showLoginScreen()
+        showAuthenticationScreen(true)
     }
     
     private func showIntroScreen() {
-        let actions = IntroViewModelActions(showLoginScreen: showLoginScreen)
+        let actions = IntroViewModelActions(showAuthenticationScreen: showAuthenticationScreen)
         let vc = dependencies.makeIntroViewController(actions: actions)
         navigationController?.setViewControllers([vc], animated: false)
     }
     
-    private func showLoginScreen() {
-        let actions = LoginViewModelActions(showHomeScreen: showHomeScreen)
-
-        let vc = dependencies.makeLoginViewController(actions: actions)
-        navigationController?.setViewControllers([vc], animated: true)
+    private func showAuthenticationScreen(_ animated: Bool) {
+        let authenticationSceneDI =  AuthenticationDIContainer()
+        let flow = authenticationSceneDI.makeAuthenticationSceneFlowCoordinator(navigationController: navigationController)
+        flow.start(animated: animated)
     }
     
-    private func showHomeScreen() {
+    private func showAuthorizedScreen(_ animated: Bool) {
         let dependencies = AuthorizedSceneDIContainer.Dependencies()
         
         let authorizedSceneDI =  AuthorizedSceneDIContainer(dependencies: dependencies)
         let flow = authorizedSceneDI.makeAuthorizedSceneFlowCoordinator(navigationController: navigationController)
-        flow.start()
+        flow.start(animated: animated)
     }
 }
