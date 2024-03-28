@@ -43,18 +43,20 @@ class LoginViewController: ViewController<LoginViewModel> {
         emailView.inputTextField.rx.text.bind(to: vm.emailText).disposed(by: disposeBag)
         
         submitButton.rx.tap
-            .subscribe(onNext: self.vm.onAuthorized).disposed(by: disposeBag)
+            .subscribe(with: self, onNext: {vc,_ in
+                vc.vm.onAuthorized()
+            }).disposed(by: disposeBag)
         
-        registerButton.rx.tap.subscribe(onNext: {
-            self.vm.onRegister()
+        registerButton.rx.tap.subscribe(with: self, onNext: { vc,_ in
+            vc.vm.onRegister()
         }).disposed(by: disposeBag)
         
-        vm.errorEmail.subscribe(onNext: {errorMessgae in
-            self.emailView.setError(error: errorMessgae)
+        vm.errorEmail.subscribe(with: self, onNext: {vc, errorMessgae in
+            vc.emailView.setError(error: errorMessgae)
         }).disposed(by: disposeBag)
         
-        vm.errorPassword.subscribe(onNext: {errorMessgae in
-            self.passwordView.setError(error: errorMessgae)
+        vm.errorPassword.subscribe(with: self, onNext: {vc, errorMessgae in
+            vc.passwordView.setError(error: errorMessgae)
         }).disposed(by: disposeBag)
     }
 

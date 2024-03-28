@@ -9,7 +9,7 @@ protocol AuthenticationFlowCoordinatorDependencies {
 final class AuthenticationFlowCoordinator {
     private weak var navigationController: UINavigationController?
     private let dependencies: AuthenticationFlowCoordinatorDependencies
-    private weak var loginController: LoginViewController?
+//    private weak var loginController: LoginViewController?
     
     init(navigationController: UINavigationController? = nil, dependencies: AuthenticationFlowCoordinatorDependencies) {
         self.navigationController = navigationController
@@ -21,7 +21,7 @@ final class AuthenticationFlowCoordinator {
         let vc = dependencies.makeLoginViewController(actions: actions)
 
         navigationController?.setViewControllers([vc], animated: animated)
-        loginController = vc
+//        loginController = vc
         
     }
     
@@ -32,9 +32,9 @@ final class AuthenticationFlowCoordinator {
     }
     
     private func backToLoginScreen() {
-        if let vc = loginController {
-            navigationController?.popToViewController(vc, animated: true)
-        }
+//        if let vc = loginController {
+            navigationController?.popViewController(animated: true)
+//        }
     }
     
     private func showAuthorizedScreen(_ animated: Bool) {

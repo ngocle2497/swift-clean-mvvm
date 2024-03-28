@@ -13,8 +13,8 @@ class RegisterViewController: ViewController<RegisterViewModel> {
     }
 
     override func setupRx() {
-        backLoginButton.rx.tap.subscribe(onNext: {
-            self.vm.goBack()
+        backLoginButton.rx.tap.subscribe(with: self ,onNext: { vc, _ in
+            vc.vm.goBack()
         }).disposed(by: disposeBag)
     }
     
