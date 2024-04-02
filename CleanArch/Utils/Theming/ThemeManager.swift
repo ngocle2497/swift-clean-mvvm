@@ -24,6 +24,8 @@ protocol FontProtocol {
     var title2Bold: UIFont { get }
 }
 
+
+
 struct ThemeManager {
     fileprivate static var colorShared: ColorProtocol = DarkColorTheme()
     fileprivate static var fontShared: FontProtocol = DefaultFont()

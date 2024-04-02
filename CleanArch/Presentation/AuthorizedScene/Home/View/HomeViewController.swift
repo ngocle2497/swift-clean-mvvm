@@ -10,7 +10,4 @@ class HomeViewController: ViewController<HomeViewModel> {
         return vc
     }
 
-    @IBAction func onLogoutPressed(_ sender: UIButton) {
-        vm.logout()
-    }
 }

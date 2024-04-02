@@ -14,6 +14,7 @@
 		12119F382BB1295E003B4DA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12119F372BB1295E003B4DA8 /* ViewController.swift */; };
 		12119F3B2BB12DCF003B4DA8 /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12119F3A2BB12DCF003B4DA8 /* UserUseCase.swift */; };
 		12119F3D2BB13B51003B4DA8 /* TokenPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12119F3C2BB13B51003B4DA8 /* TokenPlugin.swift */; };
+		1220F6DE2BBAB3C30058CE5D /* GlobalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1220F6DD2BBAB3C30058CE5D /* GlobalSettings.swift */; };
 		123084662BB50DA5000F516E /* AuthenticationDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123084652BB50DA5000F516E /* AuthenticationDIContainer.swift */; };
 		123084682BB50DCD000F516E /* AuthenticationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123084672BB50DCD000F516E /* AuthenticationFlowCoordinator.swift */; };
 		1230846C2BB50F62000F516E /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1230846B2BB50F62000F516E /* RegisterViewController.xib */; };
@@ -22,7 +23,7 @@
 		123319812BABE36D002757BA /* StartUpSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123319802BABE36D002757BA /* StartUpSceneDIContainer.swift */; };
 		123319832BABE415002757BA /* StartUpFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123319822BABE415002757BA /* StartUpFlowCoordinator.swift */; };
 		123319852BABE6EF002757BA /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123319842BABE6EF002757BA /* AppFlowCoordinator.swift */; };
-		123319872BABECF1002757BA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 123319862BABECF1002757BA /* Launch Screen.storyboard */; };
+		123319872BABECF1002757BA /* DefaultLaunch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 123319862BABECF1002757BA /* DefaultLaunch.storyboard */; };
 		1233198C2BABEF50002757BA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1233198B2BABEF50002757BA /* LoginViewController.xib */; };
 		1233198D2BABEF50002757BA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1233198A2BABEF50002757BA /* LoginViewController.swift */; };
 		123319942BAC0A72002757BA /* InactiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123319932BAC0A72002757BA /* InactiveView.swift */; };
@@ -44,10 +45,15 @@
 		1247C88A2BAAC41E009B99D5 /* UsersResponseDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1247C8892BAAC41E009B99D5 /* UsersResponseDTO+Mapping.swift */; };
 		1247C88F2BAAD247009B99D5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1247C88D2BAAD247009B99D5 /* SplashViewController.swift */; };
 		1247C8902BAAD247009B99D5 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1247C88E2BAAD247009B99D5 /* SplashViewController.xib */; };
+		128B52FB2BB663B900E145AC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128B52F92BB663B900E145AC /* ProfileViewController.swift */; };
+		128B52FC2BB663B900E145AC /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 128B52FA2BB663B900E145AC /* ProfileViewController.xib */; };
+		128B52FF2BB66FF300E145AC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128B52FD2BB66FF300E145AC /* TabBarViewController.swift */; };
+		128B530D2BB6A3FE00E145AC /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128B530C2BB6A3FE00E145AC /* TabBar.swift */; };
+		128B53192BB6BC4000E145AC /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128B53182BB6BC4000E145AC /* ProfileViewModel.swift */; };
 		12AC9E132BABD1C20015CD65 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AC9E122BABD1C20015CD65 /* AppDIContainer.swift */; };
 		12C0FE402BB3BF9B00CAF15E /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C0FE3F2BB3BF9B00CAF15E /* InputView.swift */; };
 		12C0FE422BB3BFA200CAF15E /* InputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12C0FE412BB3BFA200CAF15E /* InputView.xib */; };
-		12C0FE442BB4255D00CAF15E /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C0FE432BB4255D00CAF15E /* JSONDecoder.swift */; };
+		12C0FE442BB4255D00CAF15E /* JSONDecoder+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C0FE432BB4255D00CAF15E /* JSONDecoder+Utilities.swift */; };
 		84DEE5152BAC78A000C49399 /* BView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DEE5142BAC78A000C49399 /* BView.swift */; };
 		84DEE51A2BAC790400C49399 /* PoppinsLatin-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84DEE5172BAC790400C49399 /* PoppinsLatin-Bold.ttf */; };
 		84DEE51B2BAC790400C49399 /* PoppinsLatin-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84DEE5182BAC790400C49399 /* PoppinsLatin-Medium.ttf */; };
@@ -64,12 +70,9 @@
 		84E7DA352BAC7EE60087F32B /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7DA342BAC7EE60087F32B /* ThemeManager.swift */; };
 		84E7DA372BAC7EFB0087F32B /* LightColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7DA362BAC7EFB0087F32B /* LightColorTheme.swift */; };
 		84E7DA392BAC7F110087F32B /* DarkColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7DA382BAC7F110087F32B /* DarkColorTheme.swift */; };
-		84E7DA3C2BAC7F400087F32B /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7DA3B2BAC7F400087F32B /* Global.swift */; };
-		84E7DA3E2BAC7F510087F32B /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7DA3D2BAC7F510087F32B /* AppSettings.swift */; };
 		84E7DA402BAC7F650087F32B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7DA3F2BAC7F650087F32B /* Configuration.swift */; };
 		84E7DA422BAC7F8B0087F32B /* Color+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7DA412BAC7F8B0087F32B /* Color+Utilities.swift */; };
 		84E7DA442BAC7F9C0087F32B /* UIFont+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7DA432BAC7F9C0087F32B /* UIFont+Utilities.swift */; };
-		BBED782C5B8DD8AE89AEE61E /* Pods_CleanArch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3EC39D079EF36B186B5DD5 /* Pods_CleanArch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +83,8 @@
 		12119F372BB1295E003B4DA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		12119F3A2BB12DCF003B4DA8 /* UserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
 		12119F3C2BB13B51003B4DA8 /* TokenPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenPlugin.swift; sourceTree = "<group>"; };
+		1220F6DA2BBA524F0058CE5D /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1220F6DD2BBAB3C30058CE5D /* GlobalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalSettings.swift; sourceTree = "<group>"; };
 		123084652BB50DA5000F516E /* AuthenticationDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDIContainer.swift; sourceTree = "<group>"; };
 		123084672BB50DCD000F516E /* AuthenticationFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowCoordinator.swift; sourceTree = "<group>"; };
 		1230846A2BB50F62000F516E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +93,7 @@
 		123319802BABE36D002757BA /* StartUpSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpSceneDIContainer.swift; sourceTree = "<group>"; };
 		123319822BABE415002757BA /* StartUpFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpFlowCoordinator.swift; sourceTree = "<group>"; };
 		123319842BABE6EF002757BA /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
-		123319862BABECF1002757BA /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		123319862BABECF1002757BA /* DefaultLaunch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DefaultLaunch.storyboard; sourceTree = "<group>"; };
 		1233198A2BABEF50002757BA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1233198B2BABEF50002757BA /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		123319932BAC0A72002757BA /* InactiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveView.swift; sourceTree = "<group>"; };
@@ -112,12 +117,17 @@
 		1247C8892BAAC41E009B99D5 /* UsersResponseDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsersResponseDTO+Mapping.swift"; sourceTree = "<group>"; };
 		1247C88D2BAAD247009B99D5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		1247C88E2BAAD247009B99D5 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		125D1E3F2BBBB0A3002119F0 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		128B52F92BB663B900E145AC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		128B52FA2BB663B900E145AC /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		128B52FD2BB66FF300E145AC /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		128B530C2BB6A3FE00E145AC /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		128B53182BB6BC4000E145AC /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		12AC9E122BABD1C20015CD65 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		12C0FE3F2BB3BF9B00CAF15E /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		12C0FE412BB3BFA200CAF15E /* InputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputView.xib; sourceTree = "<group>"; };
-		12C0FE432BB4255D00CAF15E /* JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
+		12C0FE432BB4255D00CAF15E /* JSONDecoder+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Utilities.swift"; sourceTree = "<group>"; };
 		188961CC9E7CACC09408B55D /* Pods-CleanArch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArch.release.xcconfig"; path = "Target Support Files/Pods-CleanArch/Pods-CleanArch.release.xcconfig"; sourceTree = "<group>"; };
-		4F3EC39D079EF36B186B5DD5 /* Pods_CleanArch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanArch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DEE5142BAC78A000C49399 /* BView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BView.swift; sourceTree = "<group>"; };
 		84DEE5172BAC790400C49399 /* PoppinsLatin-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoppinsLatin-Bold.ttf"; sourceTree = "<group>"; };
 		84DEE5182BAC790400C49399 /* PoppinsLatin-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoppinsLatin-Medium.ttf"; sourceTree = "<group>"; };
@@ -135,8 +145,6 @@
 		84E7DA342BAC7EE60087F32B /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		84E7DA362BAC7EFB0087F32B /* LightColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightColorTheme.swift; sourceTree = "<group>"; };
 		84E7DA382BAC7F110087F32B /* DarkColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkColorTheme.swift; sourceTree = "<group>"; };
-		84E7DA3B2BAC7F400087F32B /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
-		84E7DA3D2BAC7F510087F32B /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		84E7DA3F2BAC7F650087F32B /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		84E7DA412BAC7F8B0087F32B /* Color+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Utilities.swift"; sourceTree = "<group>"; };
 		84E7DA432BAC7F9C0087F32B /* UIFont+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Utilities.swift"; sourceTree = "<group>"; };
@@ -148,7 +156,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBED782C5B8DD8AE89AEE61E /* Pods_CleanArch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +293,8 @@
 			isa = PBXGroup;
 			children = (
 				1233199F2BAC21B3002757BA /* Flows */,
+				128B52F62BB6638700E145AC /* Profile */,
+				128B52F22BB6627B00E145AC /* TabBar */,
 				123319A02BAC21B9002757BA /* Home */,
 			);
 			path = AuthorizedScene;
@@ -339,7 +348,6 @@
 				84DEE5222BAC79A100C49399 /* swiftgen.yml */,
 				84DEE5242BAC79B900C49399 /* swift5.stencil */,
 				1247C8542BAA8B02009B99D5 /* CleanArch */,
-				1247C8532BAA8B02009B99D5 /* Products */,
 				28A5FA76252C1B16BC3B49FF /* Pods */,
 				65BEAB478ADA9FA49DC1F837 /* Frameworks */,
 			);
@@ -351,6 +359,7 @@
 				1247C8522BAA8B02009B99D5 /* CleanArch.app */,
 			);
 			name = Products;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		1247C8542BAA8B02009B99D5 /* CleanArch */ = {
@@ -382,10 +391,11 @@
 		1247C86A2BAA8B1E009B99D5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				84DEE5162BAC78E400C49399 /* Font */,
-				123319862BABECF1002757BA /* Launch Screen.storyboard */,
-				1247C86C2BAA8B4A009B99D5 /* Assets */,
 				1247C86B2BAA8B3C009B99D5 /* Localizable */,
+				1247C86C2BAA8B4A009B99D5 /* Assets */,
+				84DEE5162BAC78E400C49399 /* Font */,
+				1247C8532BAA8B02009B99D5 /* Products */,
+				123319862BABECF1002757BA /* DefaultLaunch.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -542,6 +552,57 @@
 			path = DIContainer;
 			sourceTree = "<group>";
 		};
+		128B52F22BB6627B00E145AC /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				128B52F32BB6628E00E145AC /* View */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		128B52F32BB6628E00E145AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				128B53032BB6988600E145AC /* TabBar */,
+				128B52FD2BB66FF300E145AC /* TabBarViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		128B52F62BB6638700E145AC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				128B53172BB6BC3400E145AC /* ViewModel */,
+				128B52F82BB6639D00E145AC /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		128B52F82BB6639D00E145AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				128B52F92BB663B900E145AC /* ProfileViewController.swift */,
+				128B52FA2BB663B900E145AC /* ProfileViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		128B53032BB6988600E145AC /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				128B530C2BB6A3FE00E145AC /* TabBar.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		128B53172BB6BC3400E145AC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				128B53182BB6BC4000E145AC /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		12C0FE342BB3BCA900CAF15E /* Input */ = {
 			isa = PBXGroup;
 			children = (
@@ -563,7 +624,6 @@
 		65BEAB478ADA9FA49DC1F837 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4F3EC39D079EF36B186B5DD5 /* Pods_CleanArch.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -590,6 +650,7 @@
 			isa = PBXGroup;
 			children = (
 				84DEE52A2BAC7A8000C49399 /* Default.xcconfig */,
+				125D1E3F2BBBB0A3002119F0 /* Config.xcconfig */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -627,7 +688,7 @@
 				84E7DA282BAC7E230087F32B /* String+Utilities.swift */,
 				84E7DA412BAC7F8B0087F32B /* Color+Utilities.swift */,
 				84E7DA432BAC7F9C0087F32B /* UIFont+Utilities.swift */,
-				12C0FE432BB4255D00CAF15E /* JSONDecoder.swift */,
+				12C0FE432BB4255D00CAF15E /* JSONDecoder+Utilities.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -670,9 +731,8 @@
 		84E7DA3A2BAC7F2E0087F32B /* Global */ = {
 			isa = PBXGroup;
 			children = (
-				84E7DA3B2BAC7F400087F32B /* Global.swift */,
-				84E7DA3D2BAC7F510087F32B /* AppSettings.swift */,
 				84E7DA3F2BAC7F650087F32B /* Configuration.swift */,
+				1220F6DD2BBAB3C30058CE5D /* GlobalSettings.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -723,6 +783,7 @@
 			knownRegions = (
 				en,
 				Base,
+				vi,
 			);
 			mainGroup = 1247C8492BAA8B02009B99D5;
 			productRefGroup = 1247C8532BAA8B02009B99D5 /* Products */;
@@ -742,9 +803,10 @@
 				84DEE5272BAC79F100C49399 /* Base.xcassets in Resources */,
 				1233198C2BABEF50002757BA /* LoginViewController.xib in Resources */,
 				123319992BAC1D74002757BA /* IntroViewController.xib in Resources */,
+				128B52FC2BB663B900E145AC /* ProfileViewController.xib in Resources */,
 				84DEE51B2BAC790400C49399 /* PoppinsLatin-Medium.ttf in Resources */,
 				84DEE51C2BAC790400C49399 /* PoppinsLatin-Regular.ttf in Resources */,
-				123319872BABECF1002757BA /* Launch Screen.storyboard in Resources */,
+				123319872BABECF1002757BA /* DefaultLaunch.storyboard in Resources */,
 				84DEE51F2BAC798400C49399 /* Localizable.strings in Resources */,
 				1247C8902BAAD247009B99D5 /* SplashViewController.xib in Resources */,
 				123319A42BAC21CC002757BA /* HomeViewController.xib in Resources */,
@@ -849,11 +911,13 @@
 				12119F302BB114CA003B4DA8 /* ApiConstant.swift in Sources */,
 				123319A82BAC21FB002757BA /* HomeViewModel.swift in Sources */,
 				1233198D2BABEF50002757BA /* LoginViewController.swift in Sources */,
+				128B52FB2BB663B900E145AC /* ProfileViewController.swift in Sources */,
 				84DEE5152BAC78A000C49399 /* BView.swift in Sources */,
 				123319AF2BAC2FC1002757BA /* LoginViewModel.swift in Sources */,
 				1247C88A2BAAC41E009B99D5 /* UsersResponseDTO+Mapping.swift in Sources */,
 				123319852BABE6EF002757BA /* AppFlowCoordinator.swift in Sources */,
 				84E7DA442BAC7F9C0087F32B /* UIFont+Utilities.swift in Sources */,
+				128B52FF2BB66FF300E145AC /* TabBarViewController.swift in Sources */,
 				123319AA2BAC223F002757BA /* AuthorizedSceneDIContainer.swift in Sources */,
 				12119F322BB1150B003B4DA8 /* NetworkManager.swift in Sources */,
 				1247C87B2BAABD1D009B99D5 /* User.swift in Sources */,
@@ -861,16 +925,15 @@
 				123319A52BAC21CC002757BA /* HomeViewController.swift in Sources */,
 				84E7DA332BAC7ED30087F32B /* DefaultFont.swift in Sources */,
 				12AC9E132BABD1C20015CD65 /* AppDIContainer.swift in Sources */,
-				84E7DA3C2BAC7F400087F32B /* Global.swift in Sources */,
 				123319942BAC0A72002757BA /* InactiveView.swift in Sources */,
 				84DEE5232BAC79A100C49399 /* swiftgen.yml in Sources */,
 				123319812BABE36D002757BA /* StartUpSceneDIContainer.swift in Sources */,
 				123084682BB50DCD000F516E /* AuthenticationFlowCoordinator.swift in Sources */,
 				84E7DA2E2BAC7E880087F32B /* LocalStorage.swift in Sources */,
+				128B53192BB6BC4000E145AC /* ProfileViewModel.swift in Sources */,
 				84E7DA352BAC7EE60087F32B /* ThemeManager.swift in Sources */,
 				12119F342BB1151E003B4DA8 /* NetworkService.swift in Sources */,
 				1247C88F2BAAD247009B99D5 /* SplashViewController.swift in Sources */,
-				84E7DA3E2BAC7F510087F32B /* AppSettings.swift in Sources */,
 				123319AC2BAC2290002757BA /* AuthorizedSceneFlowCoordinator.swift in Sources */,
 				1247C8862BAAC0A9009B99D5 /* UserRepositoriesImpl.swift in Sources */,
 				1247C8822BAABE4F009B99D5 /* UserRepository.swift in Sources */,
@@ -880,14 +943,16 @@
 				12119F362BB11531003B4DA8 /* HttpStatusCode.swift in Sources */,
 				84E7DA372BAC7EFB0087F32B /* LightColorTheme.swift in Sources */,
 				84E7DA402BAC7F650087F32B /* Configuration.swift in Sources */,
+				128B530D2BB6A3FE00E145AC /* TabBar.swift in Sources */,
 				84E7DA292BAC7E230087F32B /* String+Utilities.swift in Sources */,
 				1247C8762BAA8CE5009B99D5 /* SplashViewModel.swift in Sources */,
 				12119F3B2BB12DCF003B4DA8 /* UserUseCase.swift in Sources */,
 				123084662BB50DA5000F516E /* AuthenticationDIContainer.swift in Sources */,
 				1247C86F2BAA8BCC009B99D5 /* AppAppearance.swift in Sources */,
-				12C0FE442BB4255D00CAF15E /* JSONDecoder.swift in Sources */,
+				12C0FE442BB4255D00CAF15E /* JSONDecoder+Utilities.swift in Sources */,
 				1247C8562BAA8B02009B99D5 /* AppDelegate.swift in Sources */,
 				12119F3D2BB13B51003B4DA8 /* TokenPlugin.swift in Sources */,
+				1220F6DE2BBAB3C30058CE5D /* GlobalSettings.swift in Sources */,
 				1233199A2BAC1D74002757BA /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -899,6 +964,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				84DEE5202BAC798400C49399 /* en */,
+				1220F6DA2BBA524F0058CE5D /* vi */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -908,10 +974,11 @@
 /* Begin XCBuildConfiguration section */
 		1247C8642BAA8B03009B99D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84DEE52A2BAC7A8000C49399 /* Default.xcconfig */;
+			baseConfigurationReference = 125D1E3F2BBBB0A3002119F0 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -972,10 +1039,11 @@
 		};
 		1247C8652BAA8B03009B99D5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84DEE52A2BAC7A8000C49399 /* Default.xcconfig */;
+			baseConfigurationReference = 125D1E3F2BBBB0A3002119F0 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1031,17 +1099,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A2E7B2068F07F30A63E1A0C2 /* Pods-CleanArch.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AWT7KC93PR;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = "$(VERSION_CODE)";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = "$(APPLE_DEVELOPMENT_TEAM)";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CleanArch/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Swift Clean Arch";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UILaunchStoryboardName = "$(SPLASH_STORYBOARD_NAME).storyboard";
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1050,7 +1119,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = "$(VERSION_NAME)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-l\"c++\"",
@@ -1074,8 +1143,6 @@
 					"-framework",
 					"\"Moya\"",
 					"-framework",
-					"\"ObjectMapper\"",
-					"-framework",
 					"\"RxCocoa\"",
 					"-framework",
 					"\"RxRelay\"",
@@ -1086,8 +1153,9 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.au.CleanArch;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "$(RELEASE_PROVISIONING_PROFILE)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -1102,17 +1170,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 188961CC9E7CACC09408B55D /* Pods-CleanArch.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AWT7KC93PR;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = "$(VERSION_CODE)";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = "$(APPLE_DEVELOPMENT_TEAM)";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CleanArch/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Swift Clean Arch";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UILaunchStoryboardName = "$(SPLASH_STORYBOARD_NAME).storyboard";
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1121,7 +1190,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = "$(VERSION_NAME)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-l\"c++\"",
@@ -1145,8 +1214,6 @@
 					"-framework",
 					"\"Moya\"",
 					"-framework",
-					"\"ObjectMapper\"",
-					"-framework",
 					"\"RxCocoa\"",
 					"-framework",
 					"\"RxRelay\"",
@@ -1157,8 +1224,9 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.au.CleanArch;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "$(DEBUG_PROVISIONING_PROFILE)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;

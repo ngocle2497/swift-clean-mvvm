@@ -10,6 +10,10 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum S10n {
+  internal enum Home {
+    /// Home
+    internal static var tabTitle: String { return S10n.tr("Localizable", "home.tabTitle", fallback: "Home") }
+  }
   internal enum Login {
     /// Email
     internal static var email: String { return S10n.tr("Localizable", "login.email", fallback: "Email") }
@@ -27,6 +31,10 @@ internal enum S10n {
       /// Password is reauired!
       internal static var `required`: String { return S10n.tr("Localizable", "login.password.required", fallback: "Password is reauired!") }
     }
+  }
+  internal enum Profile {
+    /// Profile
+    internal static var tabTitle: String { return S10n.tr("Localizable", "profile.tabTitle", fallback: "Profile") }
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

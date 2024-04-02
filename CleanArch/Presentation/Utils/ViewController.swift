@@ -3,12 +3,14 @@ import UIKit
 import RxSwift
 
 class ViewController<VM: ViewModel>: UIViewController {
+     
     private let viewModel: VM!
     var vm: VM {
         get {
             return viewModel
         }
     }
+    
     let disposeBag = DisposeBag()
 
     required init(vm: VM, nibName nibNameOrNil: String? = nil, bundle nibBundleOrNil: Bundle? = nil) {
@@ -29,13 +31,21 @@ class ViewController<VM: ViewModel>: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        setupView()
-        setupText()
         setupRx()
     }
     
     func setup() {
+        GlobalSettings.shared.theme.subscribe(with: self) { vc, _ in
+            vc.themeUpdate()
+        }.disposed(by: disposeBag)
         
+        GlobalSettings.shared.language.subscribe(with: self) { vc, _ in
+            vc.languageUpdate()
+        }.disposed(by: disposeBag)
+        
+        GlobalSettings.shared.fontSize.subscribe(with: self) { vc, _ in
+            vc.fontSizeUpdate()
+        }.disposed(by: disposeBag)
     }
     
     func setupView() {
@@ -50,6 +60,17 @@ class ViewController<VM: ViewModel>: UIViewController {
         
     }
     
+    func fontSizeUpdate() {
+        setupText()
+    }
+    
+    func languageUpdate() {
+        setupText()
+    }
+    
+    func themeUpdate() {
+        setupView()
+    }
 }
 
 class ViewModel {

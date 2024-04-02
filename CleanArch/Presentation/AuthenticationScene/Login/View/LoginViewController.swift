@@ -10,6 +10,7 @@ class LoginViewController: ViewController<LoginViewModel> {
     
     @IBOutlet weak var submitButton: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -25,6 +26,12 @@ class LoginViewController: ViewController<LoginViewModel> {
         
         passwordView.titleLabel.text = S10n.Login.password
         passwordView.inputTextField.placeholder = S10n.Login.password
+    }
+    
+    override func languageUpdate() {
+        super.languageUpdate()
+        vm.emailText.accept(vm.emailText.value)
+        vm.passwordText.accept(vm.passwordText.value)
     }
     
     override func setupView() {
@@ -48,7 +55,11 @@ class LoginViewController: ViewController<LoginViewModel> {
             }).disposed(by: disposeBag)
         
         registerButton.rx.tap.subscribe(with: self, onNext: { vc,_ in
-            vc.vm.onRegister()
+//            vc.vm.onRegister()
+            GlobalSettings.shared.updateLanguage { oldValue in
+               return oldValue == .vietnam ? .english : .vietnam
+            }
+//            vc.appSettings.language = vc.appSettings.language == .english ? .vietnam : .english
         }).disposed(by: disposeBag)
         
         vm.errorEmail.subscribe(with: self, onNext: {vc, errorMessgae in

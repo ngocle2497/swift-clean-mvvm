@@ -14,14 +14,23 @@ final class AuthorizedSceneDIContainer: AuthorizedSceneFlowCoordinatorDependenci
     }
     
     // MARK: - Home
-    func makeHomeViewController(actions: HomeViewModelActions) -> HomeViewController {
-        return HomeViewController.create(with: makeHomeViewModel(actions: actions))
+    func makeHomeViewController() -> HomeViewController {
+        return HomeViewController.create(with: makeHomeViewModel())
     }
     
-    func makeHomeViewModel(actions: HomeViewModelActions) -> HomeViewModel {
-        return HomeViewModel(actions: actions)
+    func makeHomeViewModel() -> HomeViewModel {
+        return HomeViewModel()
     }
     
+    // MARK: - Profile
+    func makeProfileViewController(actions: ProfileViewModelActions) -> ProfileViewController {
+        return ProfileViewController.create(with: makeProfileViewModel(actions: actions))
+    }
+    
+    func makeProfileViewModel(actions: ProfileViewModelActions) -> ProfileViewModel {
+        return ProfileViewModel(actions: actions)
+    }
+        
     // MARK: - Flow
     func makeAuthorizedSceneFlowCoordinator(navigationController: UINavigationController?) -> AuthorizedSceneFlowCoordinator {
         return AuthorizedSceneFlowCoordinator(navigationController: navigationController, dependencies: self)

@@ -4,3 +4,5 @@
 "login.password" = "Password";
 "login.password.required" = "Password is reauired!";
 "login.password.invalid" = "Password is Invalid!";
+"home.tabTitle" = "Home";
+"profile.tabTitle" = "Profile";

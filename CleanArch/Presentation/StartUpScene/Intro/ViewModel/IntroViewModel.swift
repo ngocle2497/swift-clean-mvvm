@@ -1,6 +1,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import AVFoundation
 
 struct IntroViewModelActions {
     let showAuthenticationScreen: (Bool) -> Void
@@ -11,12 +12,10 @@ protocol IntroViewModelInput {
 }
 
 protocol IntroViewModelOutput {
-    var publishSubject: PublishSubject<String> { get }
+    
 }
 
 final class IntroViewModel: ViewModel, IntroViewModelInput, IntroViewModelOutput {
-    
-    let publishSubject = PublishSubject<String>()
     
     private let actions: IntroViewModelActions?
     

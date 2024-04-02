@@ -2,8 +2,6 @@ import Foundation
 
 
 // MARK: - Data Tranfer Object
-
-
 struct UserResponseDTO: Codable {
     let info: Info
     let results: [UserDTO]

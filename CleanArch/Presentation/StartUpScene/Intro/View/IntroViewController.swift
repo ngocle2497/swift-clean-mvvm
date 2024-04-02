@@ -1,5 +1,4 @@
 import UIKit
-import ObjectMapper
 import Foundation
 import RxSwift
 
@@ -20,7 +19,6 @@ class IntroViewController: ViewController<IntroViewModel> {
     
     override func setup() {
         super.setup()
-        print("Setup O")
     }
     
     override func setupView() {
@@ -32,8 +30,5 @@ class IntroViewController: ViewController<IntroViewModel> {
     }
     
     override func setupRx() {
-        vm.publishSubject.subscribe(onNext: {string in
-            print("Sub: \(string)")
-        }).disposed(by: disposeBag)
     }
 }

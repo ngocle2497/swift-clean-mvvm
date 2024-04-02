@@ -13,7 +13,7 @@ target 'CleanArch' do
   pod 'Moya'
   pod 'SwiftGen'
   pod 'SDWebImage'
-  pod 'ObjectMapper'
+  pod 'IQKeyboardManagerSwift'
 end
 
 post_install do |installer|
